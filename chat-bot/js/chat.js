@@ -3,7 +3,7 @@ $(() => {
     $('#send').click(() => {
         var message = { name: $("#name").val(), message: $("#message").val() }
         postMessages(message);
-        
+        getMessages();
     });
 
     getMessages();
@@ -20,6 +20,7 @@ function getMessages() {
 }
 
 function addMessage(data) {
+    $('#messages').empty()
     $.each(data, function (index, item) {
         $('#messages').append(`<h1>${item.name}</h1> <p>${item.message}</p>`)
     });

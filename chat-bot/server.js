@@ -11,8 +11,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 })); 
 
 const messages = [
-    {name : 'Tim',message : 'Hiii'},
-    {name : 'Jane',message : 'Hello'}
+    
 ]
 
 app.get('/messages', (req, res) => {
